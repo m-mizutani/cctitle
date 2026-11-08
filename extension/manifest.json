@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "cctitle",
+  "version": "0.1.0",
+  "description": "Shows the state and name of a Claude Code session in the browser tab title.",
+  "content_scripts": [
+    {
+      "matches": ["https://claude.ai/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
