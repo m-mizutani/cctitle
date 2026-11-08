@@ -1,0 +1,20 @@
+{
+  "name": "cctitle",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chrome extension that shows the state and name of a Claude Code session in the browser tab title.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "packageManager": "pnpm@12.18.0",
+  "scripts": {
+    "build": "esbuild src/content.ts --bundle --format=iife --target=chrome120 --outfile=extension/content.js",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "jsdom": "^30.1.3",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}
